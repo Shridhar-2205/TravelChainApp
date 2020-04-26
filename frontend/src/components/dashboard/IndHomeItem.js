@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 class IndHomeItem extends Component {
   onbookHomeClick(home) {
     //this.props.bookThisHome(home);
-    axios.post("http://localhost:3001/bookhome", home).then(function(res) {
+    axios.post("http://3.23.89.106:3001/bookhome", home).then(function(res) {
       if (res.data) {
         alert("Your Booking Successful");
-     window.location = 'http://localhost:5000/blocks/new/?x='+home._id+'&text='+home.houseOwnerName+'&home='+home.houseName;
+     window.location = 'http://3.23.89.106:5000/blocks/new/?x='+home._id+'&text='+home.houseOwnerName+'&home='+home.houseName;
       }
     });
   }

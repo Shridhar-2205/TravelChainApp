@@ -12,7 +12,7 @@ import {
 export const getHomes = () => dispatch => {
   dispatch(setProfileLoading());
   axios
-    .get("http://localhost:3001/allHomes")
+    .get("http://3.23.89.106:3001/allHomes")
     .then(res =>
       dispatch({
         type: GET_ALL_HOMES,
@@ -31,7 +31,7 @@ export const getHomes = () => dispatch => {
 export const getOwnerHomes = () => dispatch => {
   dispatch(setProfileLoading());
   axios
-    .get("http://localhost:3001/OwnerHomes")
+    .get("http://3.23.89.106:3001/OwnerHomes")
     .then(res =>
       dispatch({
         type: GET_OWNER_HOMES,
@@ -50,7 +50,7 @@ export const getOwnerHomes = () => dispatch => {
 export const getBookedHomes = () => dispatch => {
   dispatch(setProfileLoading());
   axios
-    .get("http://localhost:3001/bookedHomes")
+    .get("http://3.23.89.106:3001/bookedHomes")
     .then(res =>
       dispatch({
         type: GET_BOOKED_HOMES,
@@ -69,7 +69,7 @@ export const getBookedHomes = () => dispatch => {
 export const getHomeByHomeId = _id => dispatch => {
   dispatch(setProfileLoading());
   axios
-    .get(`http://localhost:3001/home/${_id}`)
+    .get(`http://3.23.89.106:3001/home/${_id}`)
     .then(res =>
       dispatch({
         type: GET_HOME,

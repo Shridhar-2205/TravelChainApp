@@ -15,7 +15,7 @@ class ProductBlockchain extends Component {
     }
     
     componentDidMount(){
-        axios.get("http://localhost:3001/productBlockchain")
+        axios.get("http://3.23.89.106:3001/productBlockchain")
             .then( (response) => {
                     if(response.status === 200){
                         console.log("success!")

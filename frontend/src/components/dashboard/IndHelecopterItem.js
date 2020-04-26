@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 class IndHelicopterItem extends Component {
   onbookHomeClick(home) {
     //this.props.bookThisHome(home);
-    axios.post("http://localhost:3001/bookhome", home).then(function(res) {
+    axios.post("http://3.23.89.106:3001/bookhome", home).then(function(res) {
       if (res.data) {
         alert("Your Booking Successful");
         window.location = "/booked-homes";

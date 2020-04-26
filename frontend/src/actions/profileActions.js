@@ -11,7 +11,7 @@ import {
 export const getCurrentProfile = () => dispatch => {
   dispatch(setProfileLoading());
   axios
-    .get("http://localhost:3001/profile")
+    .get("http://3.23.89.106:3001/profile")
     .then(res =>
       dispatch({
         type: GET_PROFILE,
@@ -29,7 +29,7 @@ export const getCurrentProfile = () => dispatch => {
 // Create Profile
 export const createProfile = (profileData, history) => dispatch => {
   axios
-    .post("http://localhost:3001/profile", profileData)
+    .post("http://3.23.89.106:3001/profile", profileData)
     .then(res => history.push("/dashboard"))
     .catch(err =>
       dispatch({
@@ -42,7 +42,7 @@ export const createProfile = (profileData, history) => dispatch => {
 //add Home
 export const addHomes = (homeData, history) => dispatch => {
   axios
-    .post("http://localhost:3001/addhome", homeData)
+    .post("http://3.23.89.106:3001/addhome", homeData)
     .then(res => history.push("/owner-homes"))
     .catch(err =>
       dispatch({
@@ -55,7 +55,7 @@ export const addHomes = (homeData, history) => dispatch => {
 //add helicopter new || Update API later
 export const addHelicopters = (homeData, history) => dispatch => {
   axios
-    .post("http://localhost:3001/addhome", homeData)
+    .post("http://3.23.89.106:3001/addhome", homeData)
     .then(res => history.push("/owner-homes"))
     .catch(err =>
       dispatch({
