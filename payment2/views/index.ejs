@@ -1,0 +1,24 @@
+
+ <% include partials/header %>
+      
+    <h1>Blocks OF Transaction</h1>
+    <hr>
+    <% blocks.forEach((block)=> {%>
+        <div>
+        <center>
+            <h2>Traveller:<%=block.name%></h2>
+            <h2>Phone:<%=block.phone%></h2>
+            <h3>Time Stamp: <%=block.created%></h3>
+            <h3>Days: <%=block.desc%></h3>
+
+            <h3>Previous ID: <%=block.aa%></h3>
+            <h3>Owner: <%=block.bb%></h3>
+            <h3>House Name:<%=block.cc%></h3>
+            <hr>
+          </center>  
+        </div>
+   <% })%>
+
+   <% include partials/footer %>
+
+

@@ -1,0 +1,26 @@
+{
+  "name": "blogapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tweneboah",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.0.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-sanitizer": "^1.0.5",
+    "install": "^0.12.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.20",
+    "nodemailer": "^6.4.6",
+    "nodemon": "^1.18.10",
+    "qr-image": "^3.2.0",
+    "qrcode": "^1.4.4"
+  }
+}

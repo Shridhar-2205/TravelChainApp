@@ -1,0 +1,70 @@
+<% include partials/header %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    
+
+ <script>
+    window.onload =function(){
+   function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+var number = getUrlVars()["x"];
+var mytext = getUrlVars()["text"];
+var house=getUrlVars()["home"];
+//alert(mytext)
+document.getElementById("a").value = number;
+  document.getElementById("b").value = mytext;
+  document.getElementById("c").value = house;
+
+   }
+
+    </script>   
+</head>
+<body>
+
+    <div class="ui main text container segment">
+        <div class="ui huge header"> New Transaction</div>
+          <form action="/blocks" method="POST" class="ui form">
+            <div class="field">
+                <label> Name: </label>
+                <input type="text" name="user_name" placeholder="name">
+            </div>
+            <div class="field">
+                <label> Email Id: </label>
+                <input type="text"  name="user_email" placeholder="email">
+            </div>
+            <div class="field">
+                <label> Credit Card No: </label>
+                <input type="text" placeholder="01243536272">
+            </div>
+            
+            <div class="field">
+                    <label> Phone Number: </label>
+                    <input type="text" name="user_phone" placeholder="contact">
+             </div>
+
+             <div class="field">
+                    <label> Days: </label>
+                    <input type="number" name="user_desc" placeholder="body">
+             </div>
+              
+     <input type="hidden" name="user_aa" id="a">
+     <input  type="hidden" name="user_bb" id="b">
+     <input  type="hidden" name="user_cc" id="c">
+
+             <input type="submit" class="ui violet basic button">
+          </form>
+    </div>
+</body>
+</html>
+
+<% include partials/footer %>
