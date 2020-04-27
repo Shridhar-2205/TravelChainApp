@@ -10,29 +10,42 @@ import {
 
 const ProfileActions = () => {
   return (
-    <div className="btn-group mb-4" role="group">
-    
-      <Link to="/edit-profile" className="btn btn-light" style={{backgroundColor: "red" , "height" : "200px", "width" : "200px"}}>
-   
-    <FaUserCircle></FaUserCircle> <h2>Edit Profile</h2>
-       
-      </Link>
-
-      <Link to="/homes" className="btn btn-light" style={{backgroundColor: "blue"}}>
-       
-        <FaHome></FaHome> <h3>Book New Home</h3>
-      </Link>
-      <Link to="/helicopters" className="btn btn-light" style={{backgroundColor: "green"}}>
-       
-        <FaHelicopter></FaHelicopter> <h3>Book Helicopter Ride</h3>
-      </Link>
-      <Link to="/farms" className="btn btn-light" style={{backgroundColor: "violet"}}>
-       
-        <FaTree></FaTree> <h3>Book Farm Visit</h3>
-      </Link>
-      <Link to="/booked-homes" className="btn btn-light" style={{backgroundColor: "yellow"}}>
-       <FaShoppingCart></FaShoppingCart> <h3>Your Bookings</h3>
-      </Link>
+    <div>
+      <div>
+        <Link to="/edit-profile" className="btn btn-light">
+          <i className="text-info mr-1" /> <FaUserCircle></FaUserCircle> Edit
+          Profile
+        </Link>
+      </div>
+      <br/>
+      <div>
+        <Link to="/homes" className="btn btn-light">
+          <i className="text-info mr-1" />
+          <FaHome></FaHome> Book New Home
+        </Link>
+      </div>
+      <br />
+      <div>
+      <Link to="/helicopters" className="btn btn-light">
+          <i className=" text-info mr-1" />
+          <FaHelicopter></FaHelicopter> Book Helicopter Ride
+        </Link>
+      </div>
+      <br />
+      <div >
+      <Link to="/farms" className="btn btn-light">
+          <i className="text-info mr-1" />
+          <FaTree></FaTree> Book Farm Visit
+        </Link>
+      </div>
+      <br />
+      <div>
+        
+      <Link to="/booked-homes" className="btn btn-light">
+          <i className="text-info mr-1" /> <FaShoppingCart></FaShoppingCart> Your
+          Bookings
+        </Link>
+      </div>
     </div>
   );
 };
