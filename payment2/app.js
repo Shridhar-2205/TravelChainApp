@@ -13,7 +13,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('./public'))
 //sendgrid
 const sgMail = require('@sendgrid/mail');
-var apikey='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';
+var apikey='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';
 
 sgMail.setApiKey(apikey);
 const nodemailer = require('nodemailer');
@@ -96,7 +96,7 @@ db.collection('blocks').insertOne(data,function(err, collection){
 attachment = fs.readFileSync(pathToAttachment).toString("base64");
  const msg = {
   to: user,
-  from: 'shridharsaurin22@gmail.com',
+  from: 'rohanp1996@gmail.com',
   subject: 'Booking Confrimation QR Code',
   text: '123456',
   html: '<p><h1>Hello&nbsp;'+name+'</h1></p><h1>Key to your resource</h1><h2>Please find the booking confirmation details:</h2><p>Owned by:<b>'+bb+'</b></p><p>Resource:<b>'+resource+'</b></p>',
@@ -113,7 +113,7 @@ attachment = fs.readFileSync(pathToAttachment).toString("base64");
 };
 sgMail.send(msg);
 
-return  res.redirect('http://3.23.89.106:3000');
+return  res.redirect('http://localhost:3000');
 
 
 
