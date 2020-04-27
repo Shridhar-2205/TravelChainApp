@@ -13,7 +13,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('./public'))
 //sendgrid
 const sgMail = require('@sendgrid/mail');
-var apikey='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';
+var apikey='';
 
 sgMail.setApiKey(apikey);
 const nodemailer = require('nodemailer');
